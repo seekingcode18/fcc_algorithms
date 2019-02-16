@@ -6,13 +6,12 @@ function chunkArrayInGroups(arr, size) {
 
   // 2. split arr every s elements
   let split = [];
-  for (let i = 0; i < arr.length; i += newLength) {
-    split.push(arr.slice(i, 0, size));
-    newLength += size;
+  for (let i = 0; i < arr.length; i += size) {
+    split.push(arr.slice(i, 0, (i+size)));
   }  
 
   // 3. push new arrays into outside array & return
-console.log(split)
+  console.log(split)
   return split;
   
 }
