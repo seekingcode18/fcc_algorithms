@@ -1,20 +1,10 @@
 function chunkArrayInGroups(arr, size) {
-  // 1. find out size of new arrays
-  let newLength = arr.length / size;
-
-  // console.log(arr.length) // 4
-
-  // 2. split arr every s elements
-  let split = [];
+  // split arr every (size) elements & push new arrays into outside array & return
+  let splitArr = [];
   for (let i = 0; i < arr.length; i += size) {
-    split.push(arr.slice(i, 0, (i+size)));
+    splitArr.push(arr.slice(i, (i+size)));
   }  
-
-  // 3. push new arrays into outside array & return
-  console.log(split)
-  return split;
-  
+  return splitArr;
 }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
-
