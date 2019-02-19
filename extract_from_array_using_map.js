@@ -115,12 +115,7 @@ var watchList = [
 // Add your code below this line
 
 
-let rating = watchList.map(x => {
-   let result = {};
-   result["title"] = x.Title;
-   result["rating"] = x.imdbRating;
-   return result;
-});
+var rating = watchList.map(x => ({title: x.Title, rating: x.imdbRating}));
 
 // Add your code above this line
 
