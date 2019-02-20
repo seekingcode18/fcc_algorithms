@@ -112,11 +112,17 @@ var watchList = [
                 }
 ];
 
-// Add your code below this line
 
 
+// return title and rating
 var rating = watchList.map(x => ({title: x.Title, rating: x.imdbRating}));
 
-// Add your code above this line
+
+// return title and rating of films with 8+ rating
+// let filteredList = watchList
+//   .map(m => ({Title: m["Title"], Rating: parseFloat(m["imdbRating"])}))
+//   .filter(m => m.Rating >= 8.0);
+
+
 
 console.log(rating); 
