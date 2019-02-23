@@ -1,0 +1,13 @@
+function sumAll(arr) {
+  let newArr = [];
+  // now push answers to newArr
+  for (let i = Math.min(arr[0],arr[1]); i < (Math.max(arr[0],arr[1])) + 1; i++) {
+    newArr.push(i);
+  };
+  // return total of all items in array
+  return newArr.reduce(((a, b) => a+b), 0);
+  // the following is a quick way to the answer
+  // return (max - min + 1) * (max + min) / 2;
+}
+
+sumAll([1, 4]);
