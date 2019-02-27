@@ -1,0 +1,26 @@
+function destroyer(arr) {
+  let result = [];
+  let length = arr.length
+  let a = arguments;
+// console.log(arr.includes(4))
+  for (let i = 1; i < a.length; i++) {
+
+    // console.log(`Args [${i}]: ${a[i]}`);
+console.log(a[i])
+    result = arr.filter(function(x) {
+      
+      
+      // return x (!(arr.includes(a[i])))
+      // if (!(arr.includes(a[i]))) {
+
+      //   return e[i];
+      // }
+    
+    });
+  }
+
+
+  console.log( result);
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
