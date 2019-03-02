@@ -2,20 +2,21 @@ function whatIsInAName(collection, source) {
   // What's in a name?
   var arr = [];
   // Only change code below this line
+  let sourceKeys = Object.keys(source)
+  console.log(source)
+  console.log("\n")
   
-    let names = Object.keys(source)
 
-  let pairToMatch = names + ": " + source[names[0]]
-  
-  for (let i = 0; i < collection.length; i++) {
-
-    if (collection[i].hasOwnProperty(names[0]) && collection[i][names[0]] === source[names[0]]) {
-            arr.push(collection[i])
+  for (let i = 0; i < collection.length; i++) { //remove -2
+    let collectionIKeys = Object.keys(collection[i])
+    console.log("source: " + sourceKeys)
+    console.log("col: " + collectionIKeys)
+    
+    if (sourceKeys.every(elem => collectionIKeys.includes(elem))) {
+      arr.push(collection[i])
     }
   }
-  
+
   // Only change code above this line
   return arr;
 }
-
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
