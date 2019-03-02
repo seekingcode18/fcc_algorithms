@@ -3,17 +3,16 @@ function whatIsInAName(collection, source) {
   var arr = [];
   // Only change code below this line
   let sourceKeys = Object.keys(source)
-  console.log(source)
-  console.log("\n")
-  
 
   for (let i = 0; i < collection.length; i++) { //remove -2
     let collectionIKeys = Object.keys(collection[i])
-    console.log("source: " + sourceKeys)
-    console.log("col: " + collectionIKeys)
-    
-    if (sourceKeys.every(elem => collectionIKeys.includes(elem))) {
-      arr.push(collection[i])
+    for (let key of sourceKeys) {
+
+      if (sourceKeys.every(elem => collectionIKeys.includes(elem)) && collection[i][key] === source[key]) {
+
+        arr.push(collection[i])
+        break;
+      }
     }
   }
 
