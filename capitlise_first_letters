@@ -1,0 +1,4 @@
+String.prototype.toJadenCase = function () {
+  let jaden = this.split(" ")
+  return jaden.map(item => item[0].toUpperCase() + item.slice(1)).join(" ");
+};
