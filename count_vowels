@@ -1,0 +1,14 @@
+function numberOfVowels(str) {
+  const vowels = /a|e|i|o|u/gi
+  let counter = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].match(vowels)) {
+      counter++;
+    }
+  }
+
+
+  return counter;
+}
+console.log(numberOfVowels("hello world")) // exp'd: 3
