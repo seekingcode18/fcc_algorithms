@@ -1,0 +1,18 @@
+function isEvenOrOdd(int) {
+  if(int % 2 === 0) {
+    return "Even";
+  } 
+    return "Odd"
+  
+}
+
+console.log(isEvenOrOdd(5)); // exp odd
+
+// OR...
+
+function isEvenOrOdd(int) {
+  return int % 2 === 0 ? "Even" : "Odd";
+}
+
+console.log(isEvenOrOdd(12)); // exp odd
+
