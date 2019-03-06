@@ -8,11 +8,20 @@ function isEvenOrOdd(int) {
 
 console.log(isEvenOrOdd(5)); // exp odd
 
+
 // OR...
 
 function isEvenOrOdd(int) {
   return int % 2 === 0 ? "Even" : "Odd";
 }
+
+
+// OR...
+
+function isEvenOrOdd(int) {
+  return int % 2 ? "Odd" : "Even";
+}
+
 
 console.log(isEvenOrOdd(12)); // exp odd
 
