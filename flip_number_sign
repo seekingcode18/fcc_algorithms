@@ -1,0 +1,8 @@
+function flipSign(num) {
+  return num * -1;
+}
+
+console.log(flipSign(5)) //exp: -5
+console.log(flipSign(-78)) //exp: 78
+
+//alternatively, return -num
