@@ -1,0 +1,5 @@
+function spinalCase(str) {
+    return str.replace(/([^A-Z])([A-Z])|\s/g, `$1-$2`).replace(/_|\s/g, '').toLowerCase();
+}
+
+spinalCase('This Is Spinal Tap');
