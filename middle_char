@@ -1,0 +1,9 @@
+function getMiddle(s) {
+  let half = Math.floor(s.length / 2);
+  console.log(half)
+  if (s.length % 2 === 0) {
+  return s.slice(half-1, half+1);
+  } else {
+  return s.slice(half, half+1)
+  }
+}
