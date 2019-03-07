@@ -8,7 +8,7 @@ function whatIsInAName(collection, source) {
     let collectionIKeys = Object.keys(collection[i])
     for (let key of sourceKeys) {
 
-      if (sourceKeys.every(elem => collectionIKeys.includes(elem)) && collection[i][key] === source[key]) {
+      if (sourceKeys.every(elem => collectionIKeys.includes(elem) && collection[i][elem]=== source[elem])) {
 
         arr.push(collection[i])
         break;
