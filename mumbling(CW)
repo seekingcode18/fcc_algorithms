@@ -1,0 +1,28 @@
+function makeCap(char, num) {
+  let result = '';
+  for (let i = 0; i < num; i++) {
+    result += i===0 ? char.toUpperCase() : char.toLowerCase();
+  }
+  return result + '-';
+}
+
+// makeCap("aa", 2)
+
+
+
+function accum(s) {
+
+  let i = 0, length = s.length
+  let output = "";
+  
+  for (i; i < length; i++) {
+  let letter = s[i];
+  output += makeCap(letter, i+1);
+  // letter s.indexOf(letter) times with first instance as capital
+
+
+  makeCap(letter, i)
+
+  }
+  return output.slice(0, output.length-1);
+}
