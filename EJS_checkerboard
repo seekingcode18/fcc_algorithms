@@ -1,15 +1,15 @@
-function printLine(line) {
-  line % 2 === 0 ? str = ' ' : str = '#';
-  for (let i = 1; i < 8; i++) {
-      if (str[str.length-1] === '#') {
-          str += ' ';
-      } else if (str[str.length-1] === ' ') {
-          str+= '#';
-      }
+function printCheckerboard(repetitions) {
+  for (let i = 0; i < repetitions; i++) {
+    i % 2 === 0 ? str = ' ' : str = '#';
+    for (let i = 1; i < repetitions; i++) {
+        if (str[str.length-1] === '#') {
+            str += ' ';
+        } else if (str[str.length-1] === ' ') {
+            str+= '#';
+        }
+    }
+    console.log(str)
   }
-  str += '!';
-  console.log(str)
 }
 
-printLine(1)
-printLine(2)
+printCheckerboard(8)
